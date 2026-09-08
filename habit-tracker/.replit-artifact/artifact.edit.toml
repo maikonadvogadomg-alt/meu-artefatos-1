@@ -1,0 +1,21 @@
+kind = "web"
+previewPath = "/apk-builder"
+title = "APK Builder"
+version = "1.0.0"
+id = "artifacts/habit-tracker"
+
+[[services]]
+name = "web"
+paths = ["/apk-builder"]
+localPort = 22128
+
+[services.development]
+run = "pnpm --filter @workspace/habit-tracker run dev"
+
+[services.production]
+build = ["pnpm", "--filter", "@workspace/habit-tracker", "run", "build"]
+run = ["pnpm", "--filter", "@workspace/habit-tracker", "run", "serve"]
+
+[services.env]
+PORT = "22128"
+BASE_PATH = "/apk-builder"
