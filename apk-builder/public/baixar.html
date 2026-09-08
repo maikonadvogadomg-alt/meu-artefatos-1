@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instalar Aplicativos — Maikon</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0f172a;
+    color: white;
+    font-family: sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 16px 48px;
+    gap: 14px;
+  }
+  h1 { font-size: 20px; text-align: center; margin-top: 8px; }
+  .card {
+    background: #1e293b;
+    border-radius: 14px;
+    padding: 16px;
+    width: 100%;
+    max-width: 420px;
+  }
+  .card h2 { font-size: 14px; color: #94a3b8; margin-bottom: 10px; text-transform: uppercase; letter-spacing: .05em; }
+  .btn {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    padding: 18px 20px;
+    border-radius: 14px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+  }
+  .iara    { background: #16a34a; }
+  .sk      { background: #2563eb; }
+  .builder { background: #7c3aed; }
+  .btn:active { opacity: 0.75; }
+  .sub { font-size: 13px; font-weight: normal; opacity: 0.85; margin-top: 4px; }
+  .step { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 10px; font-size: 14px; line-height: 1.5; }
+  .num { background: #6366f1; color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; flex-shrink: 0; margin-top: 1px; }
+  a.link { color: #818cf8; }
+  .highlight { background: #0f2027; border-radius: 8px; padding: 10px 12px; font-family: monospace; font-size: 13px; color: #86efac; margin-top: 6px; word-break: break-all; }
+  .warn { background: #451a03; border-radius: 10px; padding: 12px; font-size: 13px; text-align: center; width: 100%; max-width: 420px; line-height: 1.6; }
+</style>
+</head>
+<body>
+
+  <h1>📲 Seus Apps — Sem Replit</h1>
+
+  <!-- IARA - destacado -->
+  <a class="btn iara" href="iara2.apk">
+    ⚖️ INSTALAR — Iara Jurídica (NOVA)
+    <div class="sub">62 MB · Versão corrigida · Toque para baixar</div>
+  </a>
+
+  <a class="btn sk" href="sk-code-editor.apk">
+    💻 INSTALAR — SK Code Editor
+    <div class="sub">60 MB · Toque para baixar</div>
+  </a>
+
+  <a class="btn builder" href="apk-builder.apk">
+    📦 INSTALAR — APK Builder
+    <div class="sub">78 MB · Toque para baixar</div>
+  </a>
+
+  <div class="warn">
+    ⚠️ Se aparecer "Fontes desconhecidas" → toque <b>Permitir desta fonte</b>
+  </div>
+
+  <!-- CHAVE GRATUITA -->
+  <div class="card">
+    <h2>🔑 Chave de IA gratuita — 5 minutos</h2>
+
+    <div class="step">
+      <div class="num">1</div>
+      <div>Acesse no celular: <a class="link" href="https://console.groq.com/keys" target="_blank">console.groq.com/keys</a><br>Cria conta grátis com Google</div>
+    </div>
+    <div class="step">
+      <div class="num">2</div>
+      <div>Clica em <b>"Create API Key"</b> → copia a chave</div>
+    </div>
+    <div class="step">
+      <div class="num">3</div>
+      <div>Abre a Iara no celular → toca no ⚙️ configurações → seleciona <b>Groq (gratuito)</b> → cola a chave → Salvar</div>
+    </div>
+    <div class="step">
+      <div class="num">4</div>
+      <div>Pronto. A IA funciona <b>sem pagar nada</b>, sem Replit, direto no seu celular para sempre.</div>
+    </div>
+  </div>
+
+</body>
+</html>
