@@ -1,0 +1,32 @@
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
+import path from "path";
+
+export default defineConfig({
+  base: "./",
+  plugins: [react(), tailwindcss()],
+  resolve: {
+    alias: {
+      "@": path.resolve(import.meta.dirname, "src"),
+      "@shared": path.resolve(import.meta.dirname, "src/shared"),
+    },
+    dedupe: ["react", "react-dom"],
+  },
+  root: path.resolve(import.meta.dirname),
+  build: {
+    outDir: path.resolve(import.meta.dirname, "dist-apk"),
+    emptyOutDir: true,
+    // IIFE: arquivo único, sem ES modules, funciona em file:// do Android WebView
+    rollupOptions: {
+      output: {
+        format: "iife",
+        entryFileNames: "assets/app.js",
+        assetFileNames: "assets/[name][extname]",
+        // Sem code splitting — tudo num arquivo só
+        manualChunks: undefined,
+        inlineDynamicImports: true,
+      },
+    },
+  },
+});
